@@ -71,9 +71,9 @@ namespace Test
             //ctdb.Delete(carTypeToDelete);
             //int x = ctdb.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
-            //// ----Update----
+            ////----Update----
             //CarType carTypeToUpdate = ctList[1];
-            //carTypeToUpdate.CarTypeName = "אוטומט";
+            //carTypeToUpdate.CarTypeName = "אוטומטי";
             //ctdb.Update(carTypeToUpdate);
             //int x = ctdb.SaveChanges();
             //Console.WriteLine($"{x} rows were updated");
@@ -86,7 +86,7 @@ namespace Test
             //LessonStatusList lsList = lsdb.SelectAll();
             //foreach (LessonStatus ls in lsList)
             //    Console.WriteLine(ls.LessonStatusName);
-            //-----הדפסת סטטוס שיעור לפי Id-----
+            ////-----הדפסת סטטוס שיעור לפי Id-----
             //LessonStatus lessonStatus = LessonStatusDB.SelectById(1);
             //if (lessonStatus != null)
             //{
@@ -241,7 +241,7 @@ namespace Test
             //    Console.WriteLine("Status not found");
             //}
 
-            //// ----Insert----
+            // ---- Insert ----
             //Status statusToInsert = new Status() { StatusName = "פעיל" };
             //statusDB.Insert(statusToInsert);
             //int x = statusDB.SaveChanges();
@@ -251,7 +251,7 @@ namespace Test
             //statusDB.Delete(statusToDelete);
             //int x = statusDB.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
-            //// ----Update----
+            // ----Update----
             //Status statusToUpdate = statusList[1];
             //statusToUpdate.StatusName = "סיים";
             //statusDB.Update(statusToUpdate);
@@ -267,7 +267,7 @@ namespace Test
             //pList = pdb.SelectAll();
             //foreach (Person c in pList)
             //    Console.WriteLine($"{c.Id}, {c.FirstName}, {c.LastName}, {c.Email},{c.PhoneNumber}, {c.Pass}");
-            ////----הדפסת אדם לפי Id-----
+            ////----הדפסת אדם לפי Id---- -
             //Person personById = PersonDB.SelectById(1);
             //if (personById != null)
             //{
@@ -278,7 +278,7 @@ namespace Test
             //    Console.WriteLine("Payment method not found");
             //}
 
-            //// ----Insert----
+            ////----Insert----
             //Person personToInsert = new Person()
             //{
             //    FirstName = "רותי",
@@ -341,7 +341,7 @@ namespace Test
             //Console.WriteLine($"{x} rows deleted");
             //// ----Update----
             //Payments paymentToUpdate = pList[1];
-            //paymentToUpdate.Amount = 200;
+            //paymentToUpdate.Amount = 190;
             //pdb.Update(paymentToUpdate);
             //int x = pdb.SaveChanges();
             //Console.WriteLine($"{x} rows were updated");
@@ -376,7 +376,7 @@ namespace Test
             //    Console.WriteLine("Payment method not found");
             //}
 
-            // ---- Insert ----
+            ////----Insert----
             //Student newStudent = new Student()
             //{
             //    FirstName = "David",
@@ -399,10 +399,30 @@ namespace Test
             //Console.WriteLine($"{x} rows deleted");
             //// ----Update----
             //Student studentToUpdate = sList[1];
-            //studentToUpdate.FirstName = "רועי";
+            //studentToUpdate.FirstName = "איתי";
             //sdb.Update(studentToUpdate);
             //int x = sdb.SaveChanges();
             //Console.WriteLine($"{x} rows were updated");
+
+            //Student studentToUpdate = StudentDB.SelectById(46);
+
+            //if (studentToUpdate != null)
+            //{
+            //    studentToUpdate.FirstName = "אורלי";
+            //    studentToUpdate.LastName = "כהן";
+            //    studentToUpdate.Email = "OrlyCohen72@gmail.com";
+            //    studentToUpdate.PhoneNumber = "0501239824";
+            //    studentToUpdate.Pass = "Orly@Cohen72";
+
+            //    sdb.Update(studentToUpdate);
+            //    int x = sdb.SaveChanges();
+
+            //    Console.WriteLine($"{x} rows were updated");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Student not found");
+            //}
 
             #endregion
 
@@ -485,7 +505,7 @@ namespace Test
             //    Console.WriteLine("Teacher not found");
             //}
 
-            //// ---- Insert ----
+            // ---- Insert ----
             //Teacher newTeacher = new Teacher()
             //{
             //    FirstName = "מיכל",
@@ -502,7 +522,7 @@ namespace Test
             //tdb.Insert(newTeacher);
             //int x = tdb.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
-            ////// ---- Delete ----
+            //// ---- Delete ----
             //Teacher teacherToDelete = tList.Last();
             //tdb.Delete(teacherToDelete);
             //int x = tdb.SaveChanges();
@@ -513,6 +533,26 @@ namespace Test
             //tdb.Update(teacherToUpdate);
             //int x = tdb.SaveChanges();
             //Console.WriteLine($"{x} rows were updated");
+
+            //Teacher teacherToUpdate = TeacherDB.SelectById(48);
+
+            //if (teacherToUpdate != null)
+            //{
+            //    teacherToUpdate.FirstName = "שירה";
+            //    teacherToUpdate.LastName = "חזות";
+            //    teacherToUpdate.Email = "ShiraHazut44@gmail.com";
+            //    teacherToUpdate.PhoneNumber = "0535741298";
+            //    teacherToUpdate.Pass = "Shira@Hazut44";
+
+            //    tdb.Update(teacherToUpdate);
+            //    int x = tdb.SaveChanges();
+
+            //    Console.WriteLine($"{x} rows were updated");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Student not found");
+            //}
 
             #endregion
 
@@ -531,7 +571,7 @@ namespace Test
             //    Console.WriteLine(l.Notes);
             //    Console.WriteLine(l.LessonStatus.LessonStatusName);
             //}
-            // ---- הדפסת שיעור לפי Id ----
+            ////----הדפסת שיעור לפי Id----
             //Lessons lessonById = LessonsDB.SelectById(3);
             //if (lessonById != null)
             //{
@@ -543,7 +583,7 @@ namespace Test
             //    Console.WriteLine("Lesson not found");
             //}
 
-            // ---- Insert ----
+            ////----Insert----
             //Lessons newLesson = new Lessons()
             //{
             //    IdStudent = StudentDB.SelectById(12),
@@ -568,16 +608,21 @@ namespace Test
             //    LessonStatus = LessonStatusDB.SelectById(1)
             //};
             //ldb.Insert(newLesson2);
-            //int x = ldb.SaveChanges();
+            //ldb.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
             //// ---- Delete ----
             //Lessons lessonToDelete = lList.Last();
             //ldb.Delete(lessonToDelete);
             //int x = ldb.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
+            //// ---- Delete2 ----
+            //Lessons lessonToDelete = LessonsDB.SelectById(13);
+            //ldb.Delete(lessonToDelete);
+            //int x = ldb.SaveChanges();
+            //Console.WriteLine($"{x} rows deleted");
             //// ---- Update ----
             //Lessons lessonToUpdate = lList[1];
-            //lessonToUpdate.Notes = "שיעור תרגול";
+            //lessonToUpdate.Notes = "שיעור ראשון";
             //ldb.Update(lessonToUpdate);
             //int x = ldb.SaveChanges();
             //Console.WriteLine($"{x} rows were updated");
