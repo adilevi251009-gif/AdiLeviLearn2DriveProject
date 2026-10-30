@@ -7,13 +7,14 @@ namespace Test
     {
         static void Main(string[] args)
         {
-
             #region CityDB
-
+            //Console.WriteLine("==========SelectAll==========");
             //CityDB cdb = new();
             //CityList cList = cdb.SelectAll();
             //foreach (City c in cList)
             //    Console.WriteLine(c.CityName);
+
+            //Console.WriteLine("==========SelectById==========");
             ////-----הדפסת עיר לפי Id-----
             //City city = CityDB.SelectById(1);
             //if (city != null)
@@ -24,18 +25,20 @@ namespace Test
             //{
             //    Console.WriteLine("City not found");
             //}
-
             ////----Insert----
+            //Console.WriteLine("==========Insert==========");
             //City myCity = new City() { CityName = "מעלה אדומים" };
             //cdb.Insert(myCity);
             //int x = cdb.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
             //// ----Delete----
+            //Console.WriteLine("==========Delete==========");
             //City c1 = cList.Last();
             //cdb.Delete(c1);
             //int x = cdb.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
             //// ----Update----
+            //Console.WriteLine("==========Update==========");
             //City cityToUpdate = cList[3];
             //cityToUpdate.CityName = "ראשון לציון";
             //cdb.Update(cityToUpdate);
@@ -45,12 +48,13 @@ namespace Test
             #endregion
 
             #region CarTypeDB
-
+            //Console.WriteLine("==========SelectAll==========");
             //CarTypeDB ctdb = new();
             //CarTypeList ctList = ctdb.SelectAll();
             //foreach (CarType c in ctList)
             //    Console.WriteLine(c.CarTypeName);
             ////------הדפסת סוג רכב לפי Id-----
+            //Console.WriteLine("==========SelectById==========");
             //CarType carType = CarTypeDB.SelectById(1);
             //if (carType != null)
             //{
@@ -62,16 +66,19 @@ namespace Test
             //}
 
             //// ----Insert----
+            //Console.WriteLine("==========Insert==========");
             //CarType carTypeToInsert = new CarType() { CarTypeName = "ידני" };
             //ctdb.Insert(carTypeToInsert);
             //int x = ctdb.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
             //// ----Delete----
+            //Console.WriteLine("==========Delete==========");
             //CarType carTypeToDelete = ctList.Last();
             //ctdb.Delete(carTypeToDelete);
             //int x = ctdb.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
             ////----Update----
+            //Console.WriteLine("==========Update==========");
             //CarType carTypeToUpdate = ctList[1];
             //carTypeToUpdate.CarTypeName = "אוטומטי";
             //ctdb.Update(carTypeToUpdate);
@@ -81,12 +88,13 @@ namespace Test
             #endregion
 
             #region LessonStatusDB
-
+            //Console.WriteLine("==========SelectAll==========");
             //LessonStatusDB lsdb = new();
             //LessonStatusList lsList = lsdb.SelectAll();
             //foreach (LessonStatus ls in lsList)
             //    Console.WriteLine(ls.LessonStatusName);
             ////-----הדפסת סטטוס שיעור לפי Id-----
+            //Console.WriteLine("==========SelectById==========");
             //LessonStatus lessonStatus = LessonStatusDB.SelectById(1);
             //if (lessonStatus != null)
             //{
@@ -98,16 +106,19 @@ namespace Test
             //}
 
             //// ----Insert----
+            //Console.WriteLine("==========Insert==========");
             //LessonStatus lessonStatusToInsert = new LessonStatus() { LessonStatusName = "נקבע" };
             //lsdb.Insert(lessonStatusToInsert);
             //int x = lsdb.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
             //// ----Delete----
+            //Console.WriteLine("==========Delete==========");
             //LessonStatus lessonStatusToDelete = lsList.Last();
             //lsdb.Delete(lessonStatusToDelete);
             //int x = lsdb.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
             //// ----Update----
+            //Console.WriteLine("==========Update==========");
             //LessonStatus lessonStatusToUpdate = lsList[1];
             //lessonStatusToUpdate.LessonStatusName = "הושלם";
             //lsdb.Update(lessonStatusToUpdate);
@@ -117,12 +128,13 @@ namespace Test
             #endregion
 
             #region TopicsDB
-
+            //Console.WriteLine("==========SelectAll==========");
             //TopicsDB topics = new();
             //TopicsList tList = topics.SelectAll();
             //foreach (Topics topic in tList)
             //    Console.WriteLine(topic.TopicName);
             ////-----הדפסת נושא לפי Id------
+            //Console.WriteLine("==========SelectById==========");
             //Topics topicById = TopicsDB.SelectById(1);
             //if (topicById != null)
             //{
@@ -134,16 +146,19 @@ namespace Test
             //}
 
             //// ----Insert----
+            //Console.WriteLine("==========Insert==========");
             //Topics topicsToInsert = new Topics() { TopicName = "חנייה" };
             //topics.Insert(topicsToInsert);
             //int x = topics.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
             //// ----Delete----
+            //Console.WriteLine("==========Delete==========");
             //Topics topicsToDelete = tList.Last();
             //topics.Delete(topicsToDelete);
             //int x = topics.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
             //// ----Update----
+            //Console.WriteLine("==========Update==========");
             //Topics topicsToUpdate = tList[1];
             //topicsToUpdate.TopicName = "רוורס";
             //topics.Update(topicsToUpdate);
@@ -153,12 +168,13 @@ namespace Test
             #endregion
 
             #region ChecklistDB
-
+            //Console.WriteLine("==========SelectAll==========");
             //ChecklistDB checklistdb = new();
             //ChecklistList cList = checklistdb.SelectAll();
             //foreach (Checklist c in cList)
             //    Console.WriteLine($"{c.Id}, {c.IdStudent.Id}, {c.IsDone}, {c.Topic.TopicName}");
-            ////-----הדפסת Checklist לפי Id-----
+            //-----הדפסת Checklist לפי Id---- -
+            //Console.WriteLine("==========SelectById==========");
             //Checklist checklistById = ChecklistDB.SelectById(1);
             //if (checklistById != null)
             //{
@@ -170,16 +186,19 @@ namespace Test
             //}
 
             //// ----Insert----
+            //Console.WriteLine("==========Insert==========");
             //Checklist checklistToInsert = new Checklist() { IdStudent = StudentDB.SelectById(12), Topic = TopicsDB.SelectById(1), IsDone = false };
             //checklistdb.Insert(checklistToInsert);
             //int x = checklistdb.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
             //// ----Delete----
+            //Console.WriteLine("==========Delete==========");
             //Checklist checklistToDelete = cList.Last();
             //checklistdb.Delete(checklistToDelete);
             //int x = checklistdb.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
             //// ----Update----
+            //Console.WriteLine("==========Update==========");
             //Checklist checklistToUpdate = cList[1];
             //checklistToUpdate.IsDone = true;
             //checklistdb.Update(checklistToUpdate);
@@ -189,12 +208,13 @@ namespace Test
             #endregion
 
             #region PaymentMethodsDB
-
+            //Console.WriteLine("==========SelectAll==========");
             //PaymentMethodsDB paymentMethodsDB = new();
             //PaymentMethodsList paymentMethodsList = paymentMethodsDB.SelectAll();
             //foreach (PaymentMethods paymentMethod in paymentMethodsList)
             //    Console.WriteLine(paymentMethod.MethodName);
             ////----הדפסת אמצעי תשלום לפי Id-----
+            //Console.WriteLine("==========SelectById==========");
             //PaymentMethods paymentMethodById = PaymentMethodsDB.SelectById(1);
             //if (paymentMethodById != null)
             //{
@@ -206,16 +226,19 @@ namespace Test
             //}
 
             //// ----Insert----
+            //Console.WriteLine("==========Insert==========");
             //PaymentMethods paymentMethodsToInsert = new PaymentMethods() { MethodName = "אשראי" };
             //paymentMethodsDB.Insert(paymentMethodsToInsert);
             //int x = paymentMethodsDB.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
             //// ----Delete----
+            //Console.WriteLine("==========Delete==========");
             //PaymentMethods paymentMethodsToDelete = paymentMethodsList.Last();
             //paymentMethodsDB.Delete(paymentMethodsToDelete);
             //int x = paymentMethodsDB.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
             //// ----Update----
+            //Console.WriteLine("==========Update==========");
             //PaymentMethods paymentMethodsToUpdate = paymentMethodsList[1];
             //paymentMethodsToUpdate.MethodName = "ביט";
             //paymentMethodsDB.Update(paymentMethodsToUpdate);
@@ -225,12 +248,13 @@ namespace Test
             #endregion
 
             #region StatusDB
-
+            //Console.WriteLine("==========SelectAll==========");
             //StatusDB statusDB = new();
             //StatusList statusList = statusDB.SelectAll();
             //foreach (Status status in statusList)
             //    Console.WriteLine(status.StatusName);
             ////-----הדפסת סטטוס לפי Id-----
+            //Console.WriteLine("==========SelectById==========");
             //Status statusById = StatusDB.SelectById(1);
             //if (statusById != null)
             //{
@@ -241,17 +265,20 @@ namespace Test
             //    Console.WriteLine("Status not found");
             //}
 
-            // ---- Insert ----
+            //// ---- Insert ----
+            //Console.WriteLine("==========Insert==========");
             //Status statusToInsert = new Status() { StatusName = "פעיל" };
             //statusDB.Insert(statusToInsert);
             //int x = statusDB.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
             //// ----Delete----
+            //Console.WriteLine("==========Delete==========");
             //Status statusToDelete = statusList.Last();
             //statusDB.Delete(statusToDelete);
             //int x = statusDB.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
-            // ----Update----
+            //// ----Update----
+            //Console.WriteLine("==========Update==========");
             //Status statusToUpdate = statusList[1];
             //statusToUpdate.StatusName = "סיים";
             //statusDB.Update(statusToUpdate);
@@ -261,13 +288,14 @@ namespace Test
             #endregion
 
             #region PersonDB
-
+            //Console.WriteLine("==========SelectAll==========");
             //PersonList pList;
             //PersonDB pdb = new PersonDB();
             //pList = pdb.SelectAll();
             //foreach (Person c in pList)
             //    Console.WriteLine($"{c.Id}, {c.FirstName}, {c.LastName}, {c.Email},{c.PhoneNumber}, {c.Pass}");
-            ////----הדפסת אדם לפי Id---- -
+            ////----הדפסת אדם לפי Id-----
+            //Console.WriteLine("==========SelectById==========");
             //Person personById = PersonDB.SelectById(1);
             //if (personById != null)
             //{
@@ -279,6 +307,7 @@ namespace Test
             //}
 
             ////----Insert----
+            //Console.WriteLine("==========Insert==========");
             //Person personToInsert = new Person()
             //{
             //    FirstName = "רותי",
@@ -291,11 +320,13 @@ namespace Test
             //int x = pdb.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
             ////----Delete----
+            //Console.WriteLine("==========Delete==========");
             //Person personToDelete = pList.Last();
             //pdb.Delete(personToDelete);
             //int x = pdb.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
             //// ----Update----
+            //Console.WriteLine("==========Update==========");
             //Person personToUpdate = pList[3];
             //personToUpdate.FirstName = "רון";
             //pdb.Update(personToUpdate);
@@ -305,7 +336,7 @@ namespace Test
             #endregion
 
             #region PaymentsDB
-
+            //Console.WriteLine("==========SelectAll==========");
             //PaymentsDB pdb = new PaymentsDB();
             //PaymentsList pList = pdb.SelectAll();
             //foreach (Payments p in pList)
@@ -313,6 +344,7 @@ namespace Test
             //    Console.WriteLine($"{p.Id}, {p.IdStudent.Id}, {p.Amount}, {p.PaymentDate}, {p.PaymentMethod.Id}");
             //}
             ////-----הדפסת פרטי תשלום לפי Id-----
+            //Console.WriteLine("==========SelectById==========");
             //Payments paymentById = PaymentsDB.SelectById(3);
             //if (paymentById != null)
             //{
@@ -324,6 +356,7 @@ namespace Test
             //}
 
             //// ----Insert----
+            //Console.WriteLine("==========Insert==========");
             //Payments paymentToInsert = new Payments()
             //{
             //    IdStudent = StudentDB.SelectById(13),
@@ -335,11 +368,13 @@ namespace Test
             //int x = pdb.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
             //// ----Delete----
+            //Console.WriteLine("==========Delete==========");
             //Payments paymentToDelete = pList.Last();
             //pdb.Delete(paymentToDelete);
             //int x = pdb.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
             //// ----Update----
+            //Console.WriteLine("==========Update==========");
             //Payments paymentToUpdate = pList[1];
             //paymentToUpdate.Amount = 190;
             //pdb.Update(paymentToUpdate);
@@ -348,8 +383,8 @@ namespace Test
 
             #endregion
 
-            #region StudentDB
-
+            #region StudentDB 
+            //Console.WriteLine("==========SelectAll==========");
             //StudentDB sdb = new();
             //StudentList sList = sdb.SelectAll();
             //foreach (Student s in sList)
@@ -366,6 +401,7 @@ namespace Test
             //    Console.WriteLine(s.IdTeacher.Id);
             //}
             ////----הדפסת אדם לפי Id-----
+            //Console.WriteLine("==========SelectById==========");
             //Student studentById = StudentDB.SelectById(12);
             //if (studentById != null)
             //{
@@ -377,13 +413,14 @@ namespace Test
             //}
 
             ////----Insert----
+            //Console.WriteLine("==========Insert==========");
             //Student newStudent = new Student()
             //{
-            //    FirstName = "David",
-            //    LastName = "Cohen",
-            //    Email = "david@gmail.com",
-            //    PhoneNumber = "0501234567",
-            //    Pass = "1234",
+            //    FirstName = "אלמוג",
+            //    LastName = "מרקו",
+            //    Email = "AlmogMarko@gmail.com",
+            //    PhoneNumber = "0525891437",
+            //    Pass = "Almog@Marko61",
             //    StartDate = DateTime.Now,
             //    BirthDate = new DateTime(2008, 5, 10),
             //    Status = StatusDB.SelectById(1),
@@ -393,17 +430,21 @@ namespace Test
             //int x = sdb.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
             //// ---- Delete ----
+            //Console.WriteLine("==========Delete==========");
             //Student studentToDelete = sList.Last();
             //sdb.Delete(studentToDelete);
             //int x = sdb.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
+
             //// ----Update----
+            //Console.WriteLine("==========Update==========");
             //Student studentToUpdate = sList[1];
             //studentToUpdate.FirstName = "איתי";
             //sdb.Update(studentToUpdate);
             //int x = sdb.SaveChanges();
             //Console.WriteLine($"{x} rows were updated");
 
+            //--------Update2 - לא להתייחס-------
             //Student studentToUpdate = StudentDB.SelectById(46);
 
             //if (studentToUpdate != null)
@@ -424,10 +465,10 @@ namespace Test
             //    Console.WriteLine("Student not found");
             //}
 
-            #endregion
+            #endregion 
 
             #region ManagerDB
-
+            //Console.WriteLine("==========SelectAll==========");
             //ManagerDB mdb = new();
             //ManagerList mList = mdb.SelectAll();
             //foreach (Manager m in mList)
@@ -440,6 +481,7 @@ namespace Test
             //    Console.WriteLine(m.Pass);
             //}
             ////----הדפסת מנהל לפי Id-----
+            //Console.WriteLine("==========SelectById==========");
             //Manager managerById = ManagerDB.SelectById(21);
             //if (managerById != null)
             //{
@@ -451,23 +493,26 @@ namespace Test
             //}
 
             //// ----Insert----
+            //Console.WriteLine("==========Insert==========");
             //Manager newManager = new Manager()
             //{
-            //    FirstName = "דוד",
+            //    FirstName = "עדי",
             //    LastName = "כהן",
-            //    PhoneNumber = "0501233215",
-            //    Email = "davidCohen67@gmail.com",
-            //    Pass = "David@Cohen01"
+            //    PhoneNumber = "0536790264",
+            //    Email = "AdiCohen67@gmail.com",
+            //    Pass = "Adi@Cohen64"
             //};
             //mdb.Insert(newManager);
             //int x = mdb.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
             ////----Delete----
+            //Console.WriteLine("==========Delete==========");
             //Manager managerToDelete = mList.Last();
             //mdb.Delete(managerToDelete);
             //int y = mdb.SaveChanges();
             //Console.WriteLine($"{y} rows deleted");
             //// ----Update----
+            //Console.WriteLine("==========Update==========");
             //Manager managerToUpdate = mList[3];
             //managerToUpdate.FirstName = "נטע";
             //mdb.Update(managerToUpdate);
@@ -477,7 +522,7 @@ namespace Test
             #endregion
 
             #region TeacherDB
-
+            //Console.WriteLine("==========SelectAll==========");
             //TeacherDB tdb = new();
             //TeacherList tList = tdb.SelectAll();
             //foreach (Teacher t in tList)
@@ -495,6 +540,7 @@ namespace Test
             //    Console.WriteLine(t.Status.Id);
             //}
             //// ---- הדפסת מורה לפי Id ----
+            //Console.WriteLine("==========SelectById==========");
             //Teacher teacherById = TeacherDB.SelectById(4);
             //if (teacherById != null)
             //{
@@ -505,14 +551,15 @@ namespace Test
             //    Console.WriteLine("Teacher not found");
             //}
 
-            // ---- Insert ----
+            //// ---- Insert ----
+            //Console.WriteLine("==========Insert==========");
             //Teacher newTeacher = new Teacher()
             //{
-            //    FirstName = "מיכל",
-            //    LastName = "שמש",
-            //    Email = "MichalShemesh84@gmail.com",
-            //    PhoneNumber = "0501238426",
-            //    Pass = "Michal@Shemesh26",
+            //    FirstName = "מאי",
+            //    LastName = "הרמן",
+            //    Email = "MayHerman14@gmail.com",
+            //    PhoneNumber = "0589543026",
+            //    Pass = "May@Herman26",
             //    City = CityDB.SelectById(4),
             //    CarType = CarTypeDB.SelectById(2),
             //    PricePerLesson = 210,
@@ -523,17 +570,20 @@ namespace Test
             //int x = tdb.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
             //// ---- Delete ----
+            //Console.WriteLine("==========Delete==========");
             //Teacher teacherToDelete = tList.Last();
             //tdb.Delete(teacherToDelete);
             //int x = tdb.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
             //// ---- Update ----
+            //Console.WriteLine("==========Update==========");
             //Teacher teacherToUpdate = tList[1];
             //teacherToUpdate.FirstName = "עדי";
             //tdb.Update(teacherToUpdate);
             //int x = tdb.SaveChanges();
             //Console.WriteLine($"{x} rows were updated");
 
+            // ------Update2 - לא להתייחס!!-----
             //Teacher teacherToUpdate = TeacherDB.SelectById(48);
 
             //if (teacherToUpdate != null)
@@ -556,8 +606,9 @@ namespace Test
 
             #endregion
 
+            //לצלם את זההההההה!!!!
             #region LessonsDB
-
+            //Console.WriteLine("==========SelectAll==========");
             //LessonsDB ldb = new();
             //LessonsList lList = ldb.SelectAll();
             //foreach (Lessons l in lList)
@@ -572,6 +623,7 @@ namespace Test
             //    Console.WriteLine(l.LessonStatus.LessonStatusName);
             //}
             ////----הדפסת שיעור לפי Id----
+            //Console.WriteLine("==========SelectById==========");
             //Lessons lessonById = LessonsDB.SelectById(3);
             //if (lessonById != null)
             //{
@@ -584,19 +636,7 @@ namespace Test
             //}
 
             ////----Insert----
-            //Lessons newLesson = new Lessons()
-            //{
-            //    IdStudent = StudentDB.SelectById(12),
-            //    IdTeacher = TeacherDB.SelectById(4),
-            //    LessonDate = new DateTime(2026, 10, 20),
-            //    LessonTime = DateTime.Today.AddHours(10),
-            //    Topics = TopicsDB.SelectById(1),
-            //    Notes = "שיעור ראשון",
-            //    LessonStatus = LessonStatusDB.SelectById(1)
-            //};
-            //ldb.Insert(newLesson);
-            //int x = ldb.SaveChanges();
-            //Console.WriteLine($"{x} rows inserted");
+            //Console.WriteLine("==========Insert==========");
             //Lessons newLesson2 = new Lessons()
             //{
             //    IdStudent = StudentDB.SelectById(13),
@@ -608,19 +648,21 @@ namespace Test
             //    LessonStatus = LessonStatusDB.SelectById(1)
             //};
             //ldb.Insert(newLesson2);
-            //ldb.SaveChanges();
+            //int x = ldb.SaveChanges();
             //Console.WriteLine($"{x} rows inserted");
             //// ---- Delete ----
+            //Console.WriteLine("==========Delete==========");
             //Lessons lessonToDelete = lList.Last();
             //ldb.Delete(lessonToDelete);
             //int x = ldb.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
             //// ---- Delete2 ----
-            //Lessons lessonToDelete = LessonsDB.SelectById(13);
+            //Lessons lessonToDelete = LessonsDB.SelectById(16);
             //ldb.Delete(lessonToDelete);
             //int x = ldb.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
             //// ---- Update ----
+            //Console.WriteLine("==========Update==========");
             //Lessons lessonToUpdate = lList[1];
             //lessonToUpdate.Notes = "שיעור ראשון";
             //ldb.Update(lessonToUpdate);
@@ -628,6 +670,7 @@ namespace Test
             //Console.WriteLine($"{x} rows were updated");
 
             #endregion
+
 
         }
     }
