@@ -606,7 +606,6 @@ namespace Test
 
             #endregion
 
-            //לצלם את זההההההה!!!!
             #region LessonsDB
             //Console.WriteLine("==========SelectAll==========");
             //LessonsDB ldb = new();
@@ -657,7 +656,7 @@ namespace Test
             //int x = ldb.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");
             //// ---- Delete2 ----
-            //Lessons lessonToDelete = LessonsDB.SelectById(16);
+            //Lessons lessonToDelete = LessonsDB.SelectById(18);
             //ldb.Delete(lessonToDelete);
             //int x = ldb.SaveChanges();
             //Console.WriteLine($"{x} rows deleted");

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\ViewModel.csproj", "{4CFF580B-154D-4B53-BACB-4CC53FAA4F9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learn2DriveAPI", "Learn2DriveAPI\Learn2DriveAPI.csproj", "{F6E46EEC-9848-4E7D-B258-6443FC4B4EE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4CFF580B-154D-4B53-BACB-4CC53FAA4F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CFF580B-154D-4B53-BACB-4CC53FAA4F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CFF580B-154D-4B53-BACB-4CC53FAA4F9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6E46EEC-9848-4E7D-B258-6443FC4B4EE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6E46EEC-9848-4E7D-B258-6443FC4B4EE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6E46EEC-9848-4E7D-B258-6443FC4B4EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6E46EEC-9848-4E7D-B258-6443FC4B4EE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
