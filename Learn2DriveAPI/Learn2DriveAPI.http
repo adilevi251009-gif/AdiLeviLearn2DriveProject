@@ -5,6 +5,3 @@ Accept: application/json
 
 ###
 
-GET {{Learn2DriveAPI_HostAddress}}/api/select/SelectAllStudent
-
-###

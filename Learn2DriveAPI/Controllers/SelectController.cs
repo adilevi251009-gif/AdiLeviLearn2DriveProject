@@ -10,7 +10,6 @@ namespace Learn2DriveAPI.Controllers
     public class SelectController : ControllerBase
     {
         [HttpGet]
-        //[ActionName("CitySelector")]
         public CityList SelectAllCity()
         {
             CityDB cdb = new CityDB();
@@ -19,7 +18,6 @@ namespace Learn2DriveAPI.Controllers
         }
 
         [HttpGet]
-        [ActionName("CarTypeSelector")]
         public CarTypeList SelectAllCarType()
         {
             CarTypeDB ctdb = new CarTypeDB();
@@ -28,16 +26,14 @@ namespace Learn2DriveAPI.Controllers
         }
 
         [HttpGet]
-        [ActionName("ChecklistSelector")]
         public ChecklistList SelectAllChecklist()
         {
-            ChecklistDB cdb = new ChecklistDB();
-            ChecklistList checklists = cdb.SelectAll();
+            ChecklistDB checkdb = new ChecklistDB();
+            ChecklistList checklists = checkdb.SelectAll();
             return checklists;
         }
 
         [HttpGet]
-        [ActionName("LessonsSelector")]
         public LessonsList SelectAllLessons()
         {
             LessonsDB ldb = new LessonsDB();
@@ -46,7 +42,6 @@ namespace Learn2DriveAPI.Controllers
         }
 
         [HttpGet]
-        [ActionName("LessonStatusSelector")]
         public LessonStatusList SelectAllLessonStatus()
         {
             LessonStatusDB lsdb = new LessonStatusDB();
@@ -55,7 +50,6 @@ namespace Learn2DriveAPI.Controllers
         }
 
         [HttpGet]
-        [ActionName("ManagerSelector")]
         public ManagerList SelectAllManager()
         {
             ManagerDB mdb = new ManagerDB();
@@ -64,7 +58,6 @@ namespace Learn2DriveAPI.Controllers
         }
 
         [HttpGet]
-        [ActionName("PaymentMethodsSelector")]
         public PaymentMethodsList SelectAllPaymentMethods()
         {
             PaymentMethodsDB pmdb = new PaymentMethodsDB();
@@ -73,7 +66,6 @@ namespace Learn2DriveAPI.Controllers
         }
 
         [HttpGet]
-        [ActionName("PaymentsSelector")]
         public PaymentsList SelectAllPayments()
         {
             PaymentsDB pdb = new PaymentsDB();
@@ -82,7 +74,6 @@ namespace Learn2DriveAPI.Controllers
         }
 
         [HttpGet]
-        [ActionName("PersonSelector")]
         public PersonList SelectAllPerson()
         {
             PersonDB perdb = new PersonDB();
@@ -91,7 +82,6 @@ namespace Learn2DriveAPI.Controllers
         }
 
         [HttpGet]
-        [ActionName("StatusSelector")]
         public StatusList SelectAllStatus()
         {
             StatusDB sdb = new StatusDB();
@@ -100,7 +90,6 @@ namespace Learn2DriveAPI.Controllers
         }
 
         [HttpGet]
-        [ActionName("StudentSelector")]
         public StudentList SelectAllStudent()
         {
             StudentDB studb = new StudentDB();
@@ -109,7 +98,6 @@ namespace Learn2DriveAPI.Controllers
         }
 
         [HttpGet]
-        [ActionName("TeacherSelector")]
         public TeacherList SelectAllTeacher()
         {
             TeacherDB teachdb = new TeacherDB();
@@ -118,7 +106,6 @@ namespace Learn2DriveAPI.Controllers
         }
 
         [HttpGet]
-        [ActionName("TopicsSelector")]
         public TopicsList SelectAllTopics()
         {
             TopicsDB topdb = new TopicsDB();
