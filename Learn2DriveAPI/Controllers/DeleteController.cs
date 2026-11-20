@@ -9,7 +9,7 @@ namespace Learn2DriveAPI.Controllers
     [ApiController]
     public class DeleteController : ControllerBase
     {
-        [HttpDelete]
+        [HttpDelete("{x}")]
         public int DeleteCity([FromBody] City city)
         {
             CityDB cdb = new CityDB();
@@ -18,7 +18,7 @@ namespace Learn2DriveAPI.Controllers
             return x;
         }
 
-        [HttpDelete]
+        [HttpDelete("{x}")]
         public int DeleteCarType([FromBody] CarType carType)
         {
             CarTypeDB ctdb = new CarTypeDB();
@@ -27,7 +27,7 @@ namespace Learn2DriveAPI.Controllers
             return x;
         }
 
-        [HttpDelete]
+        [HttpDelete("{x}")]
         public int DeleteChecklist([FromBody] Checklist checklist)
         {
             ChecklistDB checkdb = new ChecklistDB();
@@ -36,7 +36,7 @@ namespace Learn2DriveAPI.Controllers
             return x;
         }
 
-        [HttpDelete]
+        [HttpDelete("{x}")]
         public int DeleteLessons([FromBody] Lessons lessons)
         {
             LessonsDB ldb = new LessonsDB();
@@ -45,7 +45,7 @@ namespace Learn2DriveAPI.Controllers
             return x;
         }
 
-        [HttpDelete]
+        [HttpDelete("{x}")]
         public int DeleteLessonStatus([FromBody] LessonStatus lessonStatus)
         {
             LessonStatusDB lsdb = new LessonStatusDB();
@@ -54,7 +54,7 @@ namespace Learn2DriveAPI.Controllers
             return x;
         }
 
-        [HttpDelete]
+        [HttpDelete("{x}")]
         public int DeleteManager([FromBody] Manager manager)
         {
             ManagerDB mdb = new ManagerDB();
@@ -63,7 +63,7 @@ namespace Learn2DriveAPI.Controllers
             return x;
         }
 
-        [HttpDelete]
+        [HttpDelete("{x}")]
         public int DeletePaymentMethods([FromBody] PaymentMethods paymentMethods)
         {
             PaymentMethodsDB pmdb = new PaymentMethodsDB();
@@ -72,7 +72,7 @@ namespace Learn2DriveAPI.Controllers
             return x;
         }
 
-        [HttpDelete]
+        [HttpDelete("{x}")]
         public int DeletePayments([FromBody] Payments payments)
         {
             PaymentsDB pdb = new PaymentsDB();
@@ -81,7 +81,7 @@ namespace Learn2DriveAPI.Controllers
             return x;
         }
 
-        [HttpDelete]
+        [HttpDelete("{x}")]
         public int DeletePerson([FromBody] Person person)
         {
             PersonDB perdb = new PersonDB();
@@ -90,7 +90,7 @@ namespace Learn2DriveAPI.Controllers
             return x;
         }
 
-        [HttpDelete]
+        [HttpDelete("{x}")]
         public int DeleteStatus([FromBody] Status status)
         {
             StatusDB sdb = new StatusDB();
@@ -99,7 +99,7 @@ namespace Learn2DriveAPI.Controllers
             return x;
         }
 
-        [HttpDelete]
+        [HttpDelete("{x}")]
         public int DeleteStudent([FromBody] Student student)
         {
             StudentDB studb = new StudentDB();
@@ -108,7 +108,7 @@ namespace Learn2DriveAPI.Controllers
             return x;
         }
 
-        [HttpDelete]
+        [HttpDelete("{x}")]
         public int DeleteTeacher([FromBody] Teacher teacher)
         {
             TeacherDB teachdb = new TeacherDB();
@@ -117,7 +117,7 @@ namespace Learn2DriveAPI.Controllers
             return x;
         }
 
-        [HttpDelete]
+        [HttpDelete("{x}")]
         public int DeleteTopics([FromBody] Topics topics)
         {
             TopicsDB topdb = new TopicsDB();
