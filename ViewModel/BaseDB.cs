@@ -27,7 +27,7 @@ namespace ViewModel
             }
             string[] st = s.Split('\\');
             int x = st.Length - 6;
-            st[x] = "VViewModel";
+            st[x] = "ViewModel";
             Array.Resize(ref st, x + 1);
             string str = String.Join('\\', st);
             return str;
@@ -36,6 +36,7 @@ namespace ViewModel
         public BaseDB()
         {
             connection ??= new OleDbConnection(connectionString);
+           
         }
 
         public abstract BaseEntity NewEntity();
@@ -43,6 +44,8 @@ namespace ViewModel
         // שיטת Select אחת ויחידה, בטוחה שמונעת התנגשויות באמצעות Reader מקומי
         protected List<BaseEntity> Select(string sqlText)
         {
+
+         
             List<BaseEntity> list = new List<BaseEntity>();
 
             using (OleDbConnection localConn = new OleDbConnection(connectionString))
@@ -51,6 +54,7 @@ namespace ViewModel
                 {
                     try
                     {
+                        localCmd.CommandTimeout = 60; // בשניות
                         localConn.Open();
                         using (OleDbDataReader localReader = localCmd.ExecuteReader())
                         {

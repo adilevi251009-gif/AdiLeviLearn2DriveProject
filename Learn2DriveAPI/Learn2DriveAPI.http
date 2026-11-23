@@ -4,7 +4,14 @@ GET {{Learn2DriveAPI_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+GET {{Learn2DriveAPI_HostAddress}}/api/select/SelectAllCity
 
-GET {{Learn2DriveAPI_HostAddress}}/api/select/SelectAllCarType
+###
+
+GET {{Learn2DriveAPI_HostAddress}}/api/select/SelectAllStudent
+
+###
+
+GET {{Learn2DriveAPI_HostAddress}}/api/select/SelectAllChecklist
 
 ###

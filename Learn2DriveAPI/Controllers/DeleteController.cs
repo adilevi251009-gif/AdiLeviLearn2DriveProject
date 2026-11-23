@@ -99,7 +99,7 @@ namespace Learn2DriveAPI.Controllers
             return x;
         }
 
-        [HttpDelete("{x}")]
+        [HttpDelete("{x}")] 
         public int DeleteStudent([FromBody] Student student)
         {
             StudentDB studb = new StudentDB();

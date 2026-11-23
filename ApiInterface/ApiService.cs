@@ -18,6 +18,7 @@ namespace ApiInterface
             client = new HttpClient();
         }
 
+        #region GetAll
         public async Task<CarTypeList> GetAllCarTypes()
         {
             return await client.GetFromJsonAsync<CarTypeList>(url + "/api/select/SelectAllCarType");
@@ -70,156 +71,173 @@ namespace ApiInterface
         {
             return await client.GetFromJsonAsync<TopicsList>(url + "/api/select/SelectAllTopics");
         }
+        #endregion
 
-
-
-
-
+        #region Update
         public async Task<int> UpdateCarType(CarType carType)
         {
-            var response = await client.PutAsJsonAsync(url + "/api/update/UpdateCarType", carType);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PutAsJsonAsync(url + "/api/update/UpdateCarType", carType)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> UpdateChecklist(Checklist checklist)
         {
-            var response = await client.PutAsJsonAsync(url + "/api/update/UpdateChecklist", checklist);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PutAsJsonAsync(url + "/api/update/UpdateChecklist", checklist)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> UpdateCity(City city)
         {
-            var response = await client.PutAsJsonAsync(url + "/api/update/UpdateCity", city);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PutAsJsonAsync(url + "/api/update/UpdateCity", city)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> UpdateLessons(Lessons lessons)
         {
-            var response = await client.PutAsJsonAsync(url + "/api/update/UpdateLessons", lessons);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PutAsJsonAsync(url + "/api/update/UpdateLessons", lessons)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> UpdateLessonStatus(LessonStatus lessonStatus)
         {
-            var response = await client.PutAsJsonAsync(url + "/api/update/UpdateLessonStatus", lessonStatus);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PutAsJsonAsync(url + "/api/update/UpdateLessonStatus", lessonStatus)).IsSuccessStatusCode ? 1 : 0;
         }
-
         public async Task<int> UpdateManager(Manager manager)
         {
-            var response = await client.PutAsJsonAsync(url + "/api/update/UpdateManager", manager);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PutAsJsonAsync(url + "/api/update/UpdateManager", manager)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> UpdatePaymentMethods(PaymentMethods paymentMethods)
         {
-            var response = await client.PutAsJsonAsync(url + "/api/update/UpdatePaymentMethods", paymentMethods);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PutAsJsonAsync(url + "/api/update/UpdatePaymentMethods", paymentMethods)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> UpdatePayments(Payments payments)
         {
-            var response = await client.PutAsJsonAsync(url + "/api/update/UpdatePayments", payments);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PutAsJsonAsync(url + "/api/update/UpdatePayments", payments)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> UpdatePerson(Person person)
         {
-            var response = await client.PutAsJsonAsync(url + "/api/update/UpdatePerson", person);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PutAsJsonAsync(url + "/api/update/UpdatePerson", person)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> UpdateStatus(Status status)
         {
-            var response = await client.PutAsJsonAsync(url + "/api/update/UpdateStatus", status);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PutAsJsonAsync(url + "/api/update/UpdateStatus", status)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> UpdateStudent(Student student)
         {
-            var response = await client.PutAsJsonAsync(url + "/api/update/UpdateStudent", student);
-            return await response.Content.ReadFromJsonAsync<int>();
+
+            return (await client.PutAsJsonAsync(url + "/api/update/UpdateStudent", student)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> UpdateTeacher(Teacher teacher)
         {
-            var response = await client.PutAsJsonAsync(url + "/api/update/UpdateTeacher", teacher);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PutAsJsonAsync(url + "/api/update/UpdateTeacher", teacher)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> UpdateTopics(Topics topics)
         {
-            var response = await client.PutAsJsonAsync(url + "/api/update/UpdateTopics", topics);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PutAsJsonAsync(url + "/api/update/UpdateTopics", topics)).IsSuccessStatusCode ? 1 : 0;
         }
+        #endregion
 
-
-
-
-
+        #region Insert
         public async Task<int> InsertCarType(CarType carType)
         {
-            var response = await client.PostAsJsonAsync(url + "/api/insert/InsertCarType", carType);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PostAsJsonAsync(url + "/api/insert/InsertCarType", carType)).IsSuccessStatusCode ? 1 : 0;
         }
-
         public async Task<int> InsertChecklist(Checklist checklist)
         {
-            var response = await client.PostAsJsonAsync(url + "/api/insert/InsertChecklist", checklist);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PostAsJsonAsync(url + "/api/insert/InsertChecklist", checklist)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> InsertCity(City city)
         {
-            var response = await client.PostAsJsonAsync(url + "/api/insert/InsertCity", city);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PostAsJsonAsync(url + "/api/insert/InsertCity", city)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> InsertLessons(Lessons lessons)
         {
-            var response = await client.PostAsJsonAsync(url + "/api/insert/InsertLessons", lessons);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PostAsJsonAsync(url + "/api/insert/InsertLessons", lessons)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> InsertLessonStatus(LessonStatus lessonStatus)
         {
-            var response = await client.PostAsJsonAsync(url + "/api/insert/InsertLessonStatus", lessonStatus);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PostAsJsonAsync(url + "/api/insert/InsertLessonStatus", lessonStatus)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> InsertManager(Manager manager)
         {
-            var response = await client.PostAsJsonAsync(url + "/api/insert/InsertManager", manager);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PostAsJsonAsync(url + "/api/insert/InsertManager", manager)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> InsertPaymentMethods(PaymentMethods paymentMethods)
         {
-            var response = await client.PostAsJsonAsync(url + "/api/insert/InsertPaymentMethods", paymentMethods);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PostAsJsonAsync(url + "/api/insert/InsertPaymentMethods", paymentMethods)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> InsertPayments(Payments payments)
         {
-            var response = await client.PostAsJsonAsync(url + "/api/insert/InsertPayments", payments);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PostAsJsonAsync(url + "/api/insert/InsertPayments", payments)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> InsertPerson(Person person)
         {
-            var response = await client.PostAsJsonAsync(url + "/api/insert/InsertPerson", person);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PostAsJsonAsync(url + "/api/insert/InsertPerson", person)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> InsertStatus(Status status)
         {
-            var response = await client.PostAsJsonAsync(url + "/api/insert/InsertStatus", status);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PostAsJsonAsync(url + "/api/insert/InsertStatus", status)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> InsertStudent(Student student)
         {
-            var response = await client.PostAsJsonAsync(url + "/api/insert/InsertStudent", student);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PostAsJsonAsync(url + "/api/insert/InsertStudent", student)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> InsertTeacher(Teacher teacher)
         {
-            var response = await client.PostAsJsonAsync(url + "/api/insert/InsertTeacher", teacher);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PostAsJsonAsync(url + "/api/insert/InsertTeacher", teacher)).IsSuccessStatusCode ? 1 : 0;
         }
         public async Task<int> InsertTopics(Topics topics)
         {
-            var response = await client.PostAsJsonAsync(url + "/api/insert/InsertTopics", topics);
-            return await response.Content.ReadFromJsonAsync<int>();
+            return (await client.PostAsJsonAsync(url + "/api/insert/InsertTopics", topics)).IsSuccessStatusCode ? 1 : 0;
         }
+        #endregion
 
+        #region Delete
+        public async Task<int> DeleteCarType(int id)
+        {
+            return (await client.DeleteAsync(url + "/api/delete/DeleteCarType/" + id)).IsSuccessStatusCode ? 1 : 0;
+        }
+        public async Task<int> DeleteChecklist(int id)
+        {
+            return (await client.DeleteAsync(url + "/api/delete/DeleteChecklist/" + id)).IsSuccessStatusCode ? 1 : 0;
+        }
+        public async Task<int> DeleteCity(int id)
+        {
+            return (await client.DeleteAsync(url + "/api/delete/DeleteCity/" + id)).IsSuccessStatusCode ? 1 : 0;
+        }
+        public async Task<int> DeleteLessons(int id)
+        {
+            return (await client.DeleteAsync(url + "/api/delete/DeleteLessons/" + id)).IsSuccessStatusCode ? 1 : 0;
+        }
+        public async Task<int> DeleteLessonStatus(int id)
+        {
+            return (await client.DeleteAsync(url + "/api/delete/DeleteLessonStatus/" + id)).IsSuccessStatusCode ? 1 : 0;
+        }
+        public async Task<int> DeleteManager(int id)
+        {
+            return (await client.DeleteAsync(url + "/api/delete/DeleteManager/" + id)).IsSuccessStatusCode ? 1 : 0;
+        }
+        public async Task<int> DeletePaymentMethods(int id)
+        {
+            return (await client.DeleteAsync(url + "/api/delete/DeletePaymentMethods/" + id)).IsSuccessStatusCode ? 1 : 0;
+        }
+        public async Task<int> DeletePayments(int id)
+        {
+            return (await client.DeleteAsync(url + "/api/delete/DeletePayments/" + id)).IsSuccessStatusCode ? 1 : 0;
+        }
+        public async Task<int> DeletePerson(int id)
+        {
+            return (await client.DeleteAsync(url + "/api/delete/DeletePerson/" + id)).IsSuccessStatusCode ? 1 : 0;
+        }
+        public async Task<int> DeleteStatus(int id)
+        {
+            return (await client.DeleteAsync(url + "/api/delete/DeleteStatus/" + id)).IsSuccessStatusCode ? 1 : 0;
+        }
+        public async Task<int> DeleteStudent(int id)
+        {
+            return (await client.DeleteAsync(url + "/api/delete/DeleteStudent/" + id)).IsSuccessStatusCode ? 1 : 0;
+        }
+        public async Task<int> DeleteTeacher(int id)
+        {
+            return (await client.DeleteAsync(url + "/api/delete/DeleteTeacher/" + id)).IsSuccessStatusCode ? 1 : 0;
+        }
+        public async Task<int> DeleteTopics(int id)
+        {
+            return (await client.DeleteAsync(url + "/api/delete/DeleteTopics/" + id)).IsSuccessStatusCode ? 1 : 0;
+        }
+        #endregion
 
-
-
-
-        //public async Task<int> DeleteCarType(int id)
-        //{
-        //    return (await client.DeleteAsync(url + "/api/delete/DeleteCarType/" + id));
-        //}
     }
 }
