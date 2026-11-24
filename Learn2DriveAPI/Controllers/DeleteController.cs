@@ -9,118 +9,144 @@ namespace Learn2DriveAPI.Controllers
     [ApiController]
     public class DeleteController : ControllerBase
     {
-        [HttpDelete("{x}")]
-        public int DeleteCity([FromBody] City city)
+        [HttpDelete("{id}")]
+        public int DeleteCity(int id)
         {
             CityDB cdb = new CityDB();
+            City city = new City();
+            city.Id = id;
             cdb.Delete(city);
             int x = cdb.SaveChanges();
             return x;
         }
 
-        [HttpDelete("{x}")]
-        public int DeleteCarType([FromBody] CarType carType)
+        [HttpDelete("{id}")]
+        public int DeleteCarType(int id)
         {
             CarTypeDB ctdb = new CarTypeDB();
+            CarType carType = new CarType();
+            carType.Id = id;
             ctdb.Delete(carType);
             int x = ctdb.SaveChanges();
             return x;
         }
 
-        [HttpDelete("{x}")]
-        public int DeleteChecklist([FromBody] Checklist checklist)
+        [HttpDelete("{id}")]
+        public int DeleteChecklist(int id)
         {
             ChecklistDB checkdb = new ChecklistDB();
+            Checklist checklist = new Checklist();
+            checklist.Id = id;
             checkdb.Delete(checklist);
             int x = checkdb.SaveChanges();
             return x;
         }
 
-        [HttpDelete("{x}")]
-        public int DeleteLessons([FromBody] Lessons lessons)
+        [HttpDelete("{id}")]
+        public int DeleteLessons(int id)
         {
             LessonsDB ldb = new LessonsDB();
+            Lessons lessons = new Lessons();
+            lessons.Id = id;
             ldb.Delete(lessons);
             int x = ldb.SaveChanges();
             return x;
         }
 
-        [HttpDelete("{x}")]
-        public int DeleteLessonStatus([FromBody] LessonStatus lessonStatus)
+        [HttpDelete("{id}")]
+        public int DeleteLessonStatus(int id)
         {
             LessonStatusDB lsdb = new LessonStatusDB();
+            LessonStatus lessonStatus = new LessonStatus();
+            lessonStatus.Id = id;
             lsdb.Delete(lessonStatus);
             int x = lsdb.SaveChanges();
             return x;
         }
 
-        [HttpDelete("{x}")]
-        public int DeleteManager([FromBody] Manager manager)
+        [HttpDelete("{id}")]
+        public int DeleteManager(int id)
         {
             ManagerDB mdb = new ManagerDB();
+            Manager manager = new Manager();
+            manager.Id = id;
             mdb.Delete(manager);
             int x = mdb.SaveChanges();
             return x;
         }
 
-        [HttpDelete("{x}")]
-        public int DeletePaymentMethods([FromBody] PaymentMethods paymentMethods)
+        [HttpDelete("{id}")]
+        public int DeletePaymentMethods(int id)
         {
             PaymentMethodsDB pmdb = new PaymentMethodsDB();
+            PaymentMethods paymentMethods = new PaymentMethods();
+            paymentMethods.Id = id;
             pmdb.Delete(paymentMethods);
             int x = pmdb.SaveChanges();
             return x;
         }
 
-        [HttpDelete("{x}")]
-        public int DeletePayments([FromBody] Payments payments)
+        [HttpDelete("{id}")]
+        public int DeletePayments(int id)
         {
             PaymentsDB pdb = new PaymentsDB();
+            Payments payments = new Payments();
+            payments.Id = id;
             pdb.Delete(payments);
             int x = pdb.SaveChanges();
             return x;
         }
 
-        [HttpDelete("{x}")]
-        public int DeletePerson([FromBody] Person person)
+        [HttpDelete("{id}")]
+        public int DeletePerson(int id)
         {
             PersonDB perdb = new PersonDB();
+            Person person = new Person();
+            person.Id = id;
             perdb.Delete(person);
             int x = perdb.SaveChanges();
             return x;
         }
 
-        [HttpDelete("{x}")]
-        public int DeleteStatus([FromBody] Status status)
+        [HttpDelete("{id}")]
+        public int DeleteStatus(int id)
         {
             StatusDB sdb = new StatusDB();
+            Status status = new Status();
+            status.Id = id;
             sdb.Delete(status);
             int x = sdb.SaveChanges();
             return x;
         }
 
-        [HttpDelete("{x}")] 
-        public int DeleteStudent([FromBody] Student student)
+        [HttpDelete("{id}")]
+        public int DeleteStudent(int id)
         {
             StudentDB studb = new StudentDB();
+            Student student = new Student();
+            student.Id = id;
             studb.Delete(student);
             int x = studb.SaveChanges();
             return x;
         }
 
-        [HttpDelete("{x}")]
-        public int DeleteTeacher([FromBody] Teacher teacher)
+        [HttpDelete("{id}")]
+        public int DeleteTeacher(int id)
         {
             TeacherDB teachdb = new TeacherDB();
+            Teacher teacher = new Teacher();
+            teacher.Id = id;
             teachdb.Delete(teacher);
             int x = teachdb.SaveChanges();
             return x;
         }
 
-        [HttpDelete("{x}")]
-        public int DeleteTopics([FromBody] Topics topics)
+        [HttpDelete("{id}")]
+        public int DeleteTopics(int id)
         {
             TopicsDB topdb = new TopicsDB();
+            Topics topics = new Topics();
+            topics.Id = id;
             topdb.Delete(topics);
             int x = topdb.SaveChanges();
             return x;
