@@ -15,3 +15,7 @@ GET {{Learn2DriveAPI_HostAddress}}/api/select/SelectAllStudent
 GET {{Learn2DriveAPI_HostAddress}}/api/select/SelectAllChecklist
 
 ###
+
+GET {{Learn2DriveAPI_HostAddress}}/api/select/SelectAllManager
+
+###

@@ -14,7 +14,8 @@ namespace ApiInterface
         public HttpClient client;
         public ApiService()
         {
-            url = "http://localhost:5256";
+            // url = "http://localhost:5256";
+            url = "https://2k8ghnvt-5256.euw.devtunnels.ms";
             client = new HttpClient();
         }
 
